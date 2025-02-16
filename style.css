@@ -1,0 +1,226 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(aroma.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 1s ease-in;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #ff5733;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.hero {
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #ff5733;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #e04e20;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.menu-section h2 {
+    font-size: 36px;
+    color: #ff5733;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: slideIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.menu-item:nth-child(1) { animation-delay: 0.2s; }
+.menu-item:nth-child(2) { animation-delay: 0.4s; }
+.menu-item:nth-child(3) { animation-delay: 0.6s; }
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.menu-item img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.menu-item p {
+    font-size: 18px;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+.reviews {
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.review-item {
+    font-size: 20px;
+    margin: 20px auto;
+    width: 60%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.review-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    animation: bounce 0.5s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.view-menu {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    animation: pulse 2s infinite;
+}
+
+.view-menu:hover {
+    background-color: #e04e20;
+    transform: scale(1.05);
+}
+
+.aroma-title {
+    font-size: 2.5rem;
+    color: #ff5733;
+    margin-top: 20px;
+    animation: pulse 1.5s infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    text-decoration: underline;
+}
